@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Dispatch | Campus Book Exchange</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <h1>📦 Order Management</h1>
+        <div class="header-right">
+            <a href="/admin" style="margin-right: 20px; color: #667eea; text-decoration: none; font-weight: 600;">← Statistics</a>
+            <button onclick="logout()" class="logout-btn" style="background: #ef4444; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer;">Log out</button>
+        </div>
+    </header>
+
+    <main class="main-content" style="max-width: 1000px; margin: 0 auto; width: 95%;">
+        <div class="content-header" style="margin-bottom: 2rem;">
+            <h2>Dispatch Queue</h2>
+            <p style="color: #718096; margin-top: -1.5rem;">Process and track student textbook orders</p>
+        </div>
+
+        <div id="dispatch-list" class="dispatch-container">
+            <div style="text-align: center; padding: 3rem; background: white; border-radius: 12px; border: 1px dashed #cbd5e0;">
+                <p style="color: #718096;">Initializing dispatch system...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof loadOrdersForDispatch === 'function') {
+                loadOrdersForDispatch();
+            }
+        });
+    </script>
+</body>
+</html>

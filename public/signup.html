@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-wrapper">
+      <div class="login-card">
+        <h2>User Signup</h2>
+        <p class="subtitle">Create an account to continue</p>
+
+        <form id="signupForm">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter username"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Create password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="login-btn">Sign Up</button>
+        </form>
+
+        <p id="signupMessage" class="error-msg"></p>
+        <p style="margin-top: 15px; text-align: center">
+          Already have an account?
+          <a href="login.html" style="color: #8e44ad">Log in</a>
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

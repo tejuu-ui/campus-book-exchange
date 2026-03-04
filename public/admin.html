@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Access | Campus Book Exchange</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="login-wrapper">
+    <div class="login-card">
+        <h2>🔒 Admin Login</h2>
+        <p class="subtitle">Secure administrative access only</p>
+        <form id="adminLoginForm">
+            <div class="input-group">
+                <label>Administrator Email</label>
+                <input type="email" id="admin-email" placeholder="admin@demo.com" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="admin-password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="login-btn">Authenticate</button>
+        </form>
+        <p id="adminLoginMessage" class="error-msg"></p>
+        <p style="margin-top: 20px; font-size: 13px;"><a href="/" style="color: #667eea; text-decoration: none;">← Return to Store</a></p>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>

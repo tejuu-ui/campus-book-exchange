@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cart | Campus Book Exchange</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="dashboard-body">
+
+<header class="dashboard-header">
+    <h1>🛒 My Shopping Cart</h1>
+    <div class="header-right">
+        <a href="/client/dashboard" class="cart-btn" style="background: #667eea; margin-right: 15px;">⬅ Back to Dashboard</a>
+        <button onclick="logoutUser()" class="logout-btn">Log out</button>
+    </div>
+</header>
+
+<main class="main-content" style="max-width: 800px; margin: 0 auto;">
+    <div id="cart-items" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+        <!-- Items injected by script.js -->
+    </div>
+
+    <div style="margin-top: 30px; text-align: right; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h2 id="total" style="margin: 0; color: #2d3748;">Total: ₹0</h2>
+        <button onclick="window.location.href='student-details.html'" class="login-btn" style="max-width: 250px; margin-top: 15px;">Proceed to Checkout</button>
+    </div>
+</main>
+
+<script src="/script.js"></script>
+</body>
+</html>

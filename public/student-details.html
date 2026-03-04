@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout Details | Campus Book Exchange</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="login-wrapper">
+
+    <div class="login-card" style="width: 450px;">
+        <h2>🎓 Checkout Info</h2>
+        <p class="subtitle">Please provide your contact details to complete the order</p>
+        
+        <form id="studentForm">
+            <div class="input-group">
+                <label>Full Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input type="tel" id="phoneNumber" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+
+            <button type="submit" class="login-btn">Confirm Order</button>
+        </form>
+
+        <p id="message" style="margin-top: 15px; font-weight: 600;"></p>
+        <p style="margin-top: 15px;"><a href="/cart.html" style="color: #667eea; text-decoration: none; font-size: 0.875rem;">← Back to Cart</a></p>
+    </div>
+
+    <script src="/script.js"></script>
+    <script>
+        // Check if cart is empty before allowing checkout
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        if (cart.length === 0) {
+            alert('Your cart is empty! Redirecting to dashboard...');
+            window.location.href = '/client/dashboard';
+        }
+
+        // Auto-fill student name from database/session
+        fetch('/api/me')
+            .then(res => res.json())
+            .then(user => {
+                const nameInput = document.getElementById('studentName');
+                if (user && user.name) {
+                    nameInput.value = user.name;
+                    // Optionally make it read-only if you want strictness, 
+                    // but keeping it editable for corrections.
+                }
+            })
+            .catch(err => console.error('Failed to auto-fill name:', err));
+    </script>
+</body>
+</html>

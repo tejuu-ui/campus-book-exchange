@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Campus Book Exchange</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <h1>🚀 Campus Admin</h1>
+        <div class="header-right">
+            <span id="admin-name" style="margin-right: 15px; font-weight: 500; color: #4a5568;">Welcome, Admin</span>
+            <button onclick="logout()" id="logoutBtn" class="logout-btn" style="background: #ef4444; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: opacity 0.2s;">Log out</button>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="/admin" class="active">
+                    <span style="margin-right: 10px;">📊</span> Dashboard
+                </a></li>
+                <li><a href="/dispatch.html">
+                    <span style="margin-right: 10px;">📦</span> Dispatch Orders
+                </a></li>
+                <li><a href="/index.html">
+                    <span style="margin-right: 10px;">🏠</span> View Store
+                </a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Dashboard Overview</h2>
+                <p style="color: #718096; margin-top: -1.5rem; margin-bottom: 2rem;">Real-time analytics and management</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Active Users</h3>
+                    <p class="stat-number" id="total-users">0</p>
+                    <div style="margin-top: 10px; color: #10b981; font-size: 0.875rem; font-weight: 500;">↑ 12% from last week</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Inventory Books</h3>
+                    <p class="stat-number" id="total-books">0</p>
+                    <div style="margin-top: 10px; color: #3b82f6; font-size: 0.875rem; font-weight: 500;">Catalog health: Excellent</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Orders</h3>
+                    <p class="stat-number" id="total-orders">0</p>
+                    <div style="margin-top: 10px; color: #f59e0b; font-size: 0.875rem; font-weight: 500;">Requires attention</div>
+                </div>
+            </div>
+            
+            <div class="actions-section">
+                <h3>Quick Management</h3>
+                <div class="action-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <a href="/dispatch.html" style="text-decoration: none; background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0; color: #2d3748; transition: all 0.2s;">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🚚</div>
+                        <div style="font-weight: 600;">Manage Dispatches</div>
+                        <div style="font-size: 0.875rem; color: #718096;">Update order statuses</div>
+                    </a>
+                    <a href="/index.html" style="text-decoration: none; background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0; color: #2d3748; transition: all 0.2s;">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🛒</div>
+                        <div style="font-weight: 600;">Browse Catalog</div>
+                        <div style="font-size: 0.875rem; color: #718096;">Preview storefront</div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

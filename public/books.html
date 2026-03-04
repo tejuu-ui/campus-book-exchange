@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Marketplace | Campus Book Exchange</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <h1>📚 Public Book Market</h1>
+        <div class="header-right">
+            <a href="/" class="cart-btn">🏠 Home</a>
+            <a href="/client/dashboard" class="cart-btn" style="background: #667eea; margin-left: 10px;">Dashboard</a>
+        </div>
+    </header>
+
+    <main class="main-content" style="max-width: 1240px; margin: 0 auto; text-align: center;">
+        <div class="content-header" style="margin-bottom: 3rem;">
+            <h2>Community Marketplace</h2>
+            <p style="color: #718096; max-width: 600px; margin: 10px auto;">Browse textbooks added by other students. Contact sellers directly to complete your purchase.</p>
+        </div>
+
+        <!-- Marketplace Books Container -->
+        <div id="marketplace-list" class="marketplace-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+            <!-- Loaded by script.js -->
+            <div style="padding: 3rem; color: #718096; width: 100%;">
+                <p>Loading marketplace listings...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
