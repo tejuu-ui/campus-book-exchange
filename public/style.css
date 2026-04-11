@@ -203,6 +203,26 @@ input {
   display: none;
 }
 
+/* Logout Button */
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+.logout-btn:active {
+  transform: scale(0.97);
+}
+
 /* Dashboard Styles */
 .dashboard-body {
   background: #f0f2f5;

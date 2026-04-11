@@ -1,0 +1,45 @@
+[build]
+  # No build command needed for this project
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  # Include database files in function bundle
+  included_files = ["database/**", "middleware/**", "routes/**"]
+  node_bundler = "esbuild"
+
+# Redirect all API calls to the serverless function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+# Redirect admin dashboard route
+[[redirects]]
+  from = "/admin/dashboard"
+  to = "/admin-dashboard.html"
+  status = 200
+
+# Redirect client dashboard route
+[[redirects]]
+  from = "/client/dashboard"
+  to = "/client-dashboard.html"
+  status = 200
+
+# Redirect /admin to admin.html
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200
+
+# Redirect /books to books.html
+[[redirects]]
+  from = "/books"
+  to = "/books.html"
+  status = 200
+
+# SPA fallback - serve index.html for unknown routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

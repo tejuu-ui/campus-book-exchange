@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Database files
+*.db
+database.db
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Netlify
+.netlify/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build output
+dist/
+
+# Temporary files
+tmp/
+temp/

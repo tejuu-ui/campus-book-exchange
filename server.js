@@ -4,20 +4,20 @@ const path = require('path');
 const { requireLogin, requireAdmin } = require('./middleware/auth');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Config
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
-    secret: 'production_secret_key_8822',
+    secret: process.env.SESSION_SECRET || 'campus_book_exchange_secret_2026',
     resave: false,
     saveUninitialized: false,
     cookie: { maxAge: 24 * 60 * 60 * 1000 }
 }));
 
 app.use('/api', require('./routes/auth'));
-app.use('/api', require('./routes/sellRequests')); // Clients can POST /api/sell-request
+app.use('/api', require('./routes/sellRequests'));
 app.use('/api/admin', require('./routes/admin'));
 app.use('/api/books', require('./routes/books'));
 app.use('/api/orders', require('./routes/orders'));
@@ -37,7 +37,6 @@ app.get('/client/dashboard', requireLogin, (req, res) => {
 
 // Admin Routes
 app.get('/admin', (req, res) => {
-    // If already logged in as admin, go to dashboard
     if (req.session.user && req.session.user.role === 'admin') return res.redirect('/admin/dashboard');
     res.sendFile(path.join(__dirname, 'public', 'admin.html'));
 });
@@ -48,5 +47,5 @@ app.get('/admin/dashboard', requireAdmin, (req, res) => {
 
 // Start
 app.listen(PORT, () => {
-    console.log(`🚀 Production Server: http://localhost:${PORT}`);
+    console.log(`🚀 Server running at: http://localhost:${PORT}`);
 });
