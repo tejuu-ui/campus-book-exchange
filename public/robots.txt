@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Prevent indexing of sensitive API routes
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://yourdomain.com/sitemap.xml

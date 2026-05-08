@@ -2,22 +2,60 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CH26PCF3C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLZW5PD1Y8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-2CH26PCF3C');
+      gtag('config', 'G-ZLZW5PD1Y8');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Book Exchange | Login & Sign Up</title>
+    <title>Campus Book Exchange | Login, Buy, Sell & Exchange Books</title>
+    
+    <!-- Basic SEO Meta Tags -->
+    <meta name="description" content="Join Campus Book Exchange to easily buy, sell, and exchange textbooks with other students. Access a dynamic marketplace and save money on your university books.">
+    <meta name="keywords" content="campus book exchange, buy university books, sell textbooks, student book marketplace, college books, textbook exchange">
+    <meta name="author" content="Campus Book Exchange">
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Campus Book Exchange | Student Textbook Marketplace">
+    <meta property="og:description" content="The premier platform for students to buy, sell, and exchange textbooks securely and easily.">
+    <meta property="og:image" content="https://yourdomain.com/assets/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yourdomain.com/">
+    <meta name="twitter:title" content="Campus Book Exchange | Student Textbook Marketplace">
+    <meta name="twitter:description" content="Buy, sell, and exchange your textbooks efficiently. Join the student community today!">
+    <meta name="twitter:image" content="https://yourdomain.com/assets/twitter-card.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Campus Book Exchange",
+      "url": "https://yourdomain.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourdomain.com/books?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="user.login.css">
 </head>
 <body>
-    <div class="container" id="container">
+    <main class="container" id="container">
         <!-- Sign Up -->
         <div class="form-container sign-up-container">
             <form id="signupForm">
@@ -57,7 +95,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <script src="user.login.js"></script>
     <script src="script.js"></script>
 </body>
